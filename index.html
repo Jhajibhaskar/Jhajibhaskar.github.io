@@ -369,6 +369,10 @@
     Order Assist — The Campbell's Company
     </h3>
 
+    <h3 style="margin:4rem 0 2rem;font-size:2rem;font-family:var(--font-display);">
+    Order Exception Resolution
+    </h3>
+
     <svg viewBox="0 0 1460 170" class="flow-svg">
 
     <defs>
@@ -406,13 +410,13 @@
     <g class="flow-node">
     <rect x="470" y="45" width="160" height="80" rx="14"/>
     <text x="550" y="80" text-anchor="middle">Recommendation</text>
-    <text x="550" y="100" text-anchor="middle" class="flow-sub">Summary + Rationale</text>
+    <text x="550" y="100" text-anchor="middle" class="flow-sub">Summary + Rationale + Email</text>
     </g>
 
     <g class="flow-node">
     <rect x="710" y="45" width="160" height="80" rx="14"/>
     <text x="790" y="80" text-anchor="middle">Compose with AI</text>
-    <text x="790" y="100" text-anchor="middle" class="flow-sub">LWC + Apex</text>
+    <text x="790" y="100" text-anchor="middle" class="flow-sub">LWC + Apex + Prompt</text>
     </g>
 
     <g class="flow-node">
@@ -438,13 +442,91 @@
     <span class="chip">LWC + Apex</span>
     </div>
 
-    </div>
-
-    <h3 style="margin:5rem 0 2.2rem;font-size:2.2rem;font-family:var(--font-display);">
-    AI Claims Assistant — Knauf
+    <h3 style="margin:4rem 0 2rem;font-size:2rem;font-family:var(--font-display);">
+    Order Inquiry
     </h3>
 
+    <svg viewBox="0 0 1460 170" class="flow-svg">
+
+      <defs>
+        <marker id="arrow-inquiry"
+          viewBox="0 0 10 10"
+          refX="8"
+          refY="5"
+          markerWidth="6"
+          markerHeight="6"
+          orient="auto-start-reverse">
+          <path d="M0 0L10 5L0 10z" fill="var(--blue)"/>
+        </marker>
+      </defs>
+
+      <line x1="150" y1="85" x2="230" y2="85" class="flow-line" marker-end="url(#arrow-inquiry)"/>
+      <line x1="390" y1="85" x2="470" y2="85" class="flow-line" marker-end="url(#arrow-inquiry)"/>
+      <line x1="630" y1="85" x2="710" y2="85" class="flow-line" marker-end="url(#arrow-inquiry)"/>
+      <line x1="870" y1="85" x2="950" y2="85" class="flow-line" marker-end="url(#arrow-inquiry)"/>
+      <line x1="1110" y1="85" x2="1190" y2="85" class="flow-line" marker-end="url(#arrow-inquiry)"/>
+      <line x1="1350" y1="85" x2="1430" y2="85" class="flow-line" marker-end="url(#arrow-inquiry)"/>
+
+      <!-- Customer Email -->
+      <g class="flow-node">
+        <rect x="10" y="45" width="140" height="80" rx="14"/>
+        <text x="80" y="78" text-anchor="middle">Customer</text>
+        <text x="80" y="98" text-anchor="middle" class="flow-sub">Email + Attachments</text>
+      </g>
+
+      <!-- Prompt Builder -->
+      <g class="flow-node flow-node-accent">
+        <rect x="230" y="35" width="160" height="100" rx="14"/>
+        <text x="310" y="68" text-anchor="middle">Agentforce</text>
+        <text x="310" y="90" text-anchor="middle">Prompt Builder</text>
+        <text x="310" y="112" text-anchor="middle" class="flow-sub">Intent + Extraction</text>
+      </g>
+
+      <!-- JSON -->
+      <g class="flow-node">
+        <rect x="470" y="45" width="160" height="80" rx="14"/>
+        <text x="550" y="80" text-anchor="middle">Structured JSON</text>
+        <text x="550" y="100" text-anchor="middle" class="flow-sub">SO • PO • Intent</text>
+      </g>
+
+      <!-- Apex -->
+      <g class="flow-node">
+        <rect x="710" y="45" width="160" height="80" rx="14"/>
+        <text x="790" y="80" text-anchor="middle">Apex</text>
+        <text x="790" y="100" text-anchor="middle" class="flow-sub">Validation Engine</text>
+      </g>
+
+      <!-- Child Cases -->
+      <g class="flow-node">
+        <rect x="950" y="45" width="160" height="80" rx="14"/>
+        <text x="1030" y="80" text-anchor="middle">Child Cases</text>
+        <text x="1030" y="100" text-anchor="middle" class="flow-sub">Auto Creation</text>
+      </g>
+
+      <!-- Final -->
+      <g class="flow-node">
+        <rect x="1190" y="45" width="160" height="80" rx="14"/>
+        <text x="1270" y="80" text-anchor="middle">Salesforce</text>
+        <text x="1270" y="100" text-anchor="middle" class="flow-sub">Case Management</text>
+      </g>
+
+    </svg>
+
+    <div class="flow-tail">
+      <span class="chip">Agentforce</span>
+      <span class="chip">Prompt Builder</span>
+      <span class="chip">SO/PO Extraction</span>
+      <span class="chip">Intent Classification</span>
+      <span class="chip">Business Validation</span>
+      <span class="chip">Child Case Creation</span>
+    </div>
+    </div>
+    <br>
+
     <div class="flow-diagram" data-reveal>
+    <h3 style="margin-bottom:2.2rem;font-size:2.2rem;font-family:var(--font-display);">
+      AI Claims Assistant — Knauf
+    </h3>
       <svg viewBox="0 0 980 170" class="flow-svg" aria-label="Email to case architecture: Customer email flows through Agentforce and Einstein AI, Prompt Builder, Apex parsing, Flow orchestration, to case creation and routing">
         <defs>
           <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">

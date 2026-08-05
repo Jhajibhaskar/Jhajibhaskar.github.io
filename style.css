@@ -205,6 +205,7 @@ section{ position:relative; z-index:1; padding:11rem 2rem 8rem; }
 .chip-1{ top:6%; left:2%; animation-delay:0s; }
 .chip-2{ bottom:14%; left:-4%; animation-delay:1.4s; }
 .chip-3{ bottom:4%; right:0%; animation-delay:2.8s; }
+.chip-4{top:10%; right:-2%; animation-delay:4.2s;}
 @keyframes float{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-12px);} }
 
 .scroll-cue{

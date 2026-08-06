@@ -322,11 +322,13 @@ section{ position:relative; z-index:1; padding:11rem 2rem 8rem; }
 /* ============================================================
    Achievements
    ============================================================ */
-.achieve-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2.4rem; }
-.achieve-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:3rem; text-align:left; }
-.achieve-card i{ color:var(--blue); font-size:2.2rem; margin-bottom:1.4rem; display:block; }
-.achieve-card h3{ font-family:var(--font-display); font-size:1.8rem; margin-bottom:1rem; }
-.achieve-card p{ color:var(--muted); font-size:1.4rem; }
+.achieve-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.6rem; }
+.achieve-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-m); padding:2.2rem; text-align:left; min-width:0; }
+.achieve-card i{ color:var(--blue); font-size:2rem; margin-bottom:1.2rem; display:block; }
+.achieve-card h3{ font-family:var(--font-display); font-size:1.65rem; margin-bottom:.8rem; }
+.achieve-card p{ color:var(--muted); font-size:1.3rem; line-height:1.55; }
+@media (max-width:1200px){.achieve-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:768px){.achieve-grid{grid-template-columns:1fr;}}
 
 /* ============================================================
    Contact
